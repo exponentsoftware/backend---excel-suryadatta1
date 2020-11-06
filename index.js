@@ -3881,6 +3881,8 @@ headingColumnNames.forEach((heading) => {
 });
 
 //Write Data in Excel file
+let parsedData = JSON.stringify(data);
+parsedData = JSON.parse(parsedData);
 let rowIndex = 2;
 data.forEach((record) => {
   let columnIndex = 1;
@@ -3890,4 +3892,3 @@ data.forEach((record) => {
   rowIndex++;
 });
 wb.write('Github.xlsx');
-
